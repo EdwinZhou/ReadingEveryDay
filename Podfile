@@ -8,6 +8,7 @@ target 'ReadingEveryDay' do
   pod 'AFNetworking', '~> 3.0'
   pod 'IGListKit', '~> 3.4.0'
   pod 'YYModel'
-  pod 'MJRefresh'
+  pod 'MJRefresh', '~> 3.2.0'
+  pod 'Masonry'
 
 end

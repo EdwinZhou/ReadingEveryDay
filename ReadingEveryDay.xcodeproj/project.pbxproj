@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		E804FF67237C514B00740A95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E804FF66237C514B00740A95 /* Assets.xcassets */; };
 		E804FF6A237C514B00740A95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E804FF68237C514B00740A95 /* LaunchScreen.storyboard */; };
 		E804FF6D237C514B00740A95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E804FF6C237C514B00740A95 /* main.m */; };
+		E804FF79237DA83900740A95 /* ComponentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = E804FF78237DA83900740A95 /* ComponentFactory.m */; };
+		E804FF7C237DA87500740A95 /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = E804FF7B237DA87500740A95 /* DataService.m */; };
+		E804FF7F237DB2BF00740A95 /* FeedListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E804FF7E237DB2BF00740A95 /* FeedListViewModel.m */; };
 		F668B8F8494320A107668214 /* Pods_ReadingEveryDay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A311B93B94AE90586C9871 /* Pods_ReadingEveryDay.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,12 @@
 		E804FF69237C514B00740A95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E804FF6B237C514B00740A95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E804FF6C237C514B00740A95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E804FF77237DA83900740A95 /* ComponentFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComponentFactory.h; sourceTree = "<group>"; };
+		E804FF78237DA83900740A95 /* ComponentFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComponentFactory.m; sourceTree = "<group>"; };
+		E804FF7A237DA87500740A95 /* DataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
+		E804FF7B237DA87500740A95 /* DataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
+		E804FF7D237DB2BF00740A95 /* FeedListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedListViewModel.h; sourceTree = "<group>"; };
+		E804FF7E237DB2BF00740A95 /* FeedListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedListViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +62,6 @@
 				0FD49128FA8E3F3DEAEB36B3 /* Pods-ReadingEveryDay.debug.xcconfig */,
 				B38615480F601ABC32BB322B /* Pods-ReadingEveryDay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -86,6 +94,10 @@
 		E804FF59237C514800740A95 /* ReadingEveryDay */ = {
 			isa = PBXGroup;
 			children = (
+				E804FF76237DA76100740A95 /* View */,
+				E804FF75237DA75B00740A95 /* Service */,
+				E804FF74237DA74D00740A95 /* ViewModel */,
+				E804FF73237DA71B00740A95 /* Model */,
 				E804FF5A237C514800740A95 /* AppDelegate.h */,
 				E804FF5B237C514800740A95 /* AppDelegate.m */,
 				E804FF5D237C514800740A95 /* SceneDelegate.h */,
@@ -97,8 +109,42 @@
 				E804FF68237C514B00740A95 /* LaunchScreen.storyboard */,
 				E804FF6B237C514B00740A95 /* Info.plist */,
 				E804FF6C237C514B00740A95 /* main.m */,
+				E804FF77237DA83900740A95 /* ComponentFactory.h */,
+				E804FF78237DA83900740A95 /* ComponentFactory.m */,
 			);
 			path = ReadingEveryDay;
+			sourceTree = "<group>";
+		};
+		E804FF73237DA71B00740A95 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E804FF74237DA74D00740A95 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E804FF7D237DB2BF00740A95 /* FeedListViewModel.h */,
+				E804FF7E237DB2BF00740A95 /* FeedListViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E804FF75237DA75B00740A95 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E804FF7A237DA87500740A95 /* DataService.h */,
+				E804FF7B237DA87500740A95 /* DataService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E804FF76237DA76100740A95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,22 +223,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReadingEveryDay/Pods-ReadingEveryDay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ReadingEveryDay/Pods-ReadingEveryDay-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-ReadingEveryDay/Pods-ReadingEveryDay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -232,6 +265,9 @@
 				E804FF5C237C514800740A95 /* AppDelegate.m in Sources */,
 				E804FF6D237C514B00740A95 /* main.m in Sources */,
 				E804FF5F237C514800740A95 /* SceneDelegate.m in Sources */,
+				E804FF79237DA83900740A95 /* ComponentFactory.m in Sources */,
+				E804FF7F237DB2BF00740A95 /* FeedListViewModel.m in Sources */,
+				E804FF7C237DA87500740A95 /* DataService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
